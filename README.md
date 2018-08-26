@@ -1,6 +1,9 @@
 # UI Node Editor
 A Unity node editor for making Immediate mode UIs.
 
+![UI](https://github.com/simeonradivoev/UI-Node-Editor/raw/master/Screenshots/UI.png)
+![Editor](https://github.com/simeonradivoev/UI-Node-Editor/raw/master/Screenshots/Editor.png)
+
 ## Instructions
 
 Open the Demo scene in `UINodeEditor/Examples`
