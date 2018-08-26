@@ -1,0 +1,10 @@
+{
+    "name": "UINodeEditor",
+    "references": [
+        "NodeEditor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

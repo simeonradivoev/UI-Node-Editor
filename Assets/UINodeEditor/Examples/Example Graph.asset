@@ -1,0 +1,529 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9861d7d57b94868bb275014800c5cd5, type: 3}
+  m_Name: New UI Graph Object
+  m_EditorClassIdentifier: 
+  threaded: 0
+  m_SerializedReferences:
+  - guid: 17c2d8b2011b7143b0bf396b830b3579
+    obj: {fileID: 21300000, guid: c1d0deb3f28c747428f78f5f6402d368, type: 3}
+  - guid: 9be43755f1ae70428f56ac35441358e6
+    obj: {fileID: 2100000, guid: cb7b580c54b4d6e409232688d77ac198, type: 2}
+  m_DataAsset: {fileID: 0}
+  m_SerializedGraph: '{"typeInfo":{"fullName":"NodeEditor.NodeGraph"},"JSONnodeData":"{\"m_SerializedProperties\":[],\"m_GUID\":{\"m_GuidSerialized\":\"4513a898-5867-4ccd-a4b7-9a09f09dbfa3\"},\"m_SerializableNodes\":[{\"typeInfo\":{\"fullName\":\"UINodeEditor.UIMasterNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"fed3882c-3e14-439b-ba7f-89c44ac96f88\\\",\\\"m_Name\\\":\\\"UI
+    Master Node\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":943.0,\\\"y\\\":638.0,\\\"width\\\":0.0,\\\"height\\\":0.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":1692102720,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1692102720,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"UI Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": true,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Rect,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-871204680,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -871204680,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Rect\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"serializedVersion\\\\\\\": \\\\\\\"2\\\\\\\",\\\\n        \\\\\\\"x\\\\\\\":
+    0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0,\\\\n        \\\\\\\"width\\\\\\\": 0.0,\\\\n        \\\\\\\"height\\\\\\\":
+    0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Matrix4x4,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1472684933,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1472684933,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Matrix\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Nodes.GradientSamplerNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"62a82389-7517-4f44-9052-fcd407539a82\\\",\\\"m_Name\\\":\\\"GradientSamplerNode\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-521.135009765625,\\\"y\\\":806.5328979492188,\\\"width\\\":201.0,\\\"height\\\":101.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Gradient,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1231968253,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1231968253,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"In\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"serializedVersion\\\\\\\": \\\\\\\"2\\\\\\\",\\\\n        \\\\\\\"key0\\\\\\\":
+    {\\\\n            \\\\\\\"r\\\\\\\": 1.0,\\\\n            \\\\\\\"g\\\\\\\": 0.0,\\\\n            \\\\\\\"b\\\\\\\":
+    0.0,\\\\n            \\\\\\\"a\\\\\\\": 0.23529411852359773\\\\n        },\\\\n        \\\\\\\"key1\\\\\\\":
+    {\\\\n            \\\\\\\"r\\\\\\\": 0.3961374759674072,\\\\n            \\\\\\\"g\\\\\\\":
+    1.0,\\\\n            \\\\\\\"b\\\\\\\": 0.0,\\\\n            \\\\\\\"a\\\\\\\":
+    0.23529411852359773\\\\n        },\\\\n        \\\\\\\"key2\\\\\\\": {\\\\n            \\\\\\\"r\\\\\\\":
+    0.0,\\\\n            \\\\\\\"g\\\\\\\": 0.0,\\\\n            \\\\\\\"b\\\\\\\":
+    0.0,\\\\n            \\\\\\\"a\\\\\\\": 0.0\\\\n        },\\\\n        \\\\\\\"key3\\\\\\\":
+    {\\\\n            \\\\\\\"r\\\\\\\": 0.0,\\\\n            \\\\\\\"g\\\\\\\": 0.0,\\\\n            \\\\\\\"b\\\\\\\":
+    0.0,\\\\n            \\\\\\\"a\\\\\\\": 0.0\\\\n        },\\\\n        \\\\\\\"key4\\\\\\\":
+    {\\\\n            \\\\\\\"r\\\\\\\": 0.0,\\\\n            \\\\\\\"g\\\\\\\": 0.0,\\\\n            \\\\\\\"b\\\\\\\":
+    0.0,\\\\n            \\\\\\\"a\\\\\\\": 0.0\\\\n        },\\\\n        \\\\\\\"key5\\\\\\\":
+    {\\\\n            \\\\\\\"r\\\\\\\": 0.0,\\\\n            \\\\\\\"g\\\\\\\": 0.0,\\\\n            \\\\\\\"b\\\\\\\":
+    0.0,\\\\n            \\\\\\\"a\\\\\\\": 0.0\\\\n        },\\\\n        \\\\\\\"key6\\\\\\\":
+    {\\\\n            \\\\\\\"r\\\\\\\": 0.0,\\\\n            \\\\\\\"g\\\\\\\": 0.0,\\\\n            \\\\\\\"b\\\\\\\":
+    0.0,\\\\n            \\\\\\\"a\\\\\\\": 0.0\\\\n        },\\\\n        \\\\\\\"key7\\\\\\\":
+    {\\\\n            \\\\\\\"r\\\\\\\": 0.0,\\\\n            \\\\\\\"g\\\\\\\": 0.0,\\\\n            \\\\\\\"b\\\\\\\":
+    0.0,\\\\n            \\\\\\\"a\\\\\\\": 0.0\\\\n        },\\\\n        \\\\\\\"ctime0\\\\\\\":
+    0,\\\\n        \\\\\\\"ctime1\\\\\\\": 65535,\\\\n        \\\\\\\"ctime2\\\\\\\":
+    0,\\\\n        \\\\\\\"ctime3\\\\\\\": 0,\\\\n        \\\\\\\"ctime4\\\\\\\":
+    0,\\\\n        \\\\\\\"ctime5\\\\\\\": 0,\\\\n        \\\\\\\"ctime6\\\\\\\":
+    0,\\\\n        \\\\\\\"ctime7\\\\\\\": 0,\\\\n        \\\\\\\"atime0\\\\\\\":
+    0,\\\\n        \\\\\\\"atime1\\\\\\\": 65535,\\\\n        \\\\\\\"atime2\\\\\\\":
+    65535,\\\\n        \\\\\\\"atime3\\\\\\\": 0,\\\\n        \\\\\\\"atime4\\\\\\\":
+    0,\\\\n        \\\\\\\"atime5\\\\\\\": 0,\\\\n        \\\\\\\"atime6\\\\\\\":
+    0,\\\\n        \\\\\\\"atime7\\\\\\\": 0,\\\\n        \\\\\\\"m_Mode\\\\\\\":
+    0,\\\\n        \\\\\\\"m_NumColorKeys\\\\\\\": 2,\\\\n        \\\\\\\"m_NumAlphaKeys\\\\\\\":
+    2\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.SliderSlot\\\"},\\\"index\\\":1803358415,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1803358415,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Value\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    0.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1174104495,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1174104495,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Color\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true}\"},{\"typeInfo\":{\"fullName\":\"UINodeEditor.ScreenMatrixNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"f785e2e5-ff4e-4a90-9001-e93007a9d3cf\\\",\\\"m_Name\\\":\\\"ScreenMatrixNode\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":610.510009765625,\\\"y\\\":497.2001037597656,\\\"width\\\":164.0,\\\"height\\\":154.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[UnityEngine.Camera,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-619318535,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -619318535,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Camera\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Rect,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1375360732,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1375360732,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"ScreenRect\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"serializedVersion\\\\\\\": \\\\\\\"2\\\\\\\",\\\\n        \\\\\\\"x\\\\\\\":
+    0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0,\\\\n        \\\\\\\"width\\\\\\\": 872.0,\\\\n        \\\\\\\"height\\\\\\\":
+    1003.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Matrix4x4,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":696030448,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    696030448,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Mat\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"e00\\\\\\\": -0.003061312483623624,\\\\n        \\\\\\\"e01\\\\\\\":
+    -0.0010278807021677495,\\\\n        \\\\\\\"e02\\\\\\\": 0.0,\\\\n        \\\\\\\"e03\\\\\\\":
+    -7.480141639709473,\\\\n        \\\\\\\"e10\\\\\\\": -3.106400825458877e-8,\\\\n        \\\\\\\"e11\\\\\\\":
+    0.004394629504531622,\\\\n        \\\\\\\"e12\\\\\\\": 0.0,\\\\n        \\\\\\\"e13\\\\\\\":
+    0.11726018041372299,\\\\n        \\\\\\\"e20\\\\\\\": -0.0034400969743728639,\\\\n        \\\\\\\"e21\\\\\\\":
+    0.0009146624361164868,\\\\n        \\\\\\\"e22\\\\\\\": 0.0,\\\\n        \\\\\\\"e23\\\\\\\":
+    9.624516487121582,\\\\n        \\\\\\\"e30\\\\\\\": 0.0,\\\\n        \\\\\\\"e31\\\\\\\":
+    0.0,\\\\n        \\\\\\\"e32\\\\\\\": 0.0,\\\\n        \\\\\\\"e33\\\\\\\": 1.0\\\\n    }\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true,\\\"m_Distance\\\":4.0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Nodes.ToStringNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"bfabbc4e-eba3-4369-bda6-fc619d12935d\\\",\\\"m_Name\\\":\\\"ToStringNode\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-127.46603393554688,\\\"y\\\":494.2284240722656,\\\"width\\\":179.0,\\\"height\\\":77.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[System.Object,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":0,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    0,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"In\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[System.String,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":1,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Out\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Nodes.GlobalPropertyNode`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"298d2b74-0066-42aa-b2fe-f04a0f53ca69\\\",\\\"m_Name\\\":\\\"GlobalPropertyNode`1\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-1180.08203125,\\\"y\\\":668.8541870117188,\\\"width\\\":183.0,\\\"height\\\":106.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":-1985798546,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1985798546,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Out\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true,\\\"m_PropertyReferenceName\\\":\\\"health\\\"}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Nodes.Math.DivideFloat\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"74aaeb95-f760-4fb0-854e-0aec032cca8d\\\",\\\"m_Name\\\":\\\"DivideFloat\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-917.05615234375,\\\"y\\\":845.6978759765625,\\\"width\\\":174.0,\\\"height\\\":101.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":0,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    0,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"x\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    0.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":1,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"y\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    600.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":3,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    3,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Out\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true}\"},{\"typeInfo\":{\"fullName\":\"UINodeEditor.Elements.SimpleImageNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"594c91f7-b67a-44e7-98a3-ca198f5202eb\\\",\\\"m_Name\\\":\\\"Blur
+    BG\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":490.7997131347656,\\\"y\\\":767.8804321289063,\\\"width\\\":280.0,\\\"height\\\":418.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":667645442,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    667645442,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": true,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1502598840,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1502598840,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Position\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 16.0,\\\\n        \\\\\\\"y\\\\\\\": 16.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-837447911,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -837447911,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Size\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 100.0,\\\\n        \\\\\\\"y\\\\\\\": 100.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1040635801,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1040635801,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Min\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-967830567,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -967830567,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Max\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":847480279,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    847480279,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Min %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1311530575,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1311530575,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Max %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":2053093505,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    2053093505,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Pivot %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.5,\\\\n        \\\\\\\"y\\\\\\\": 0.5\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1174104495,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1174104495,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Color\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"r\\\\\\\": 0.949999988079071,\\\\n        \\\\\\\"g\\\\\\\":
+    0.949999988079071,\\\\n        \\\\\\\"b\\\\\\\": 0.949999988079071,\\\\n        \\\\\\\"a\\\\\\\":
+    1.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Matrix4x4,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1472684933,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1472684933,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Matrix\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Material,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1227715037,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1227715037,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Material\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":218042219,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    218042219,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Z Offset\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    0.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":1692102720,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1692102720,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"UI Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[UnityEngine.Sprite,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1988690285,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1988690285,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Sprite\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1456411898,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1456411898,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Pivot\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.5,\\\\n        \\\\\\\"y\\\\\\\": 0.5\\\\n    }\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true,\\\"m_PreserveAspect\\\":false}\"},{\"typeInfo\":{\"fullName\":\"UINodeEditor.Elements.TextNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"2cbe855f-1f83-4245-8441-d09677d17645\\\",\\\"m_Name\\\":\\\"TextNode\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":false,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":124.87816619873047,\\\"y\\\":458.5776672363281,\\\"width\\\":280.0,\\\"height\\\":484.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":667645442,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    667645442,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": true,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1502598840,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1502598840,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Position\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-837447911,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -837447911,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Size\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1040635801,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1040635801,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Min\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-967830567,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -967830567,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Max\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 22.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":847480279,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    847480279,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Min %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1311530575,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1311530575,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Max %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 1.0,\\\\n        \\\\\\\"y\\\\\\\": 1.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.String,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":-871204755,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -871204755,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Text\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    \\\\\\\"Test\\\\\\\"\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Int32,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":-837446919,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -837446919,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Size\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    28\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1456411898,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1456411898,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Pivot\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1174104495,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1174104495,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Color\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"r\\\\\\\": 1.0,\\\\n        \\\\\\\"g\\\\\\\": 1.0,\\\\n        \\\\\\\"b\\\\\\\":
+    1.0,\\\\n        \\\\\\\"a\\\\\\\": 1.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Font,
+    UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-864298781,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -864298781,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Font\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Matrix4x4,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1472684933,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1472684933,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Matrix\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[UnityEngine.Material,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1227715037,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1227715037,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Material\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":1692102720,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1692102720,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"UI Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[UnityEngine.Rect,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-407869851,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -407869851,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Extents\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":1,\\\"m_PreviewExpanded\\\":true,\\\"m_HorizontalWrap\\\":0,\\\"m_VerticalWrap\\\":0,\\\"m_ScaleFactor\\\":1.0,\\\"m_Anchor\\\":4,\\\"m_Style\\\":1}\"},{\"typeInfo\":{\"fullName\":\"UINodeEditor.Elements.SimpleImageNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"bd37a50b-a056-4da1-b315-8b1f6529cf89\\\",\\\"m_Name\\\":\\\"Health
+    Bar\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":false,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-39.499942779541019,\\\"y\\\":969.9630737304688,\\\"width\\\":280.0,\\\"height\\\":106.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":667645442,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    667645442,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": true,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1502598840,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1502598840,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Position\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-837447911,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -837447911,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Size\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 16.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1040635801,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1040635801,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Min\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": -16.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-967830567,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -967830567,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Max\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 16.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":847480279,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    847480279,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Min %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 1.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1311530575,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1311530575,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Max %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 1.0,\\\\n        \\\\\\\"y\\\\\\\": 1.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":2053093505,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    2053093505,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Pivot %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.5,\\\\n        \\\\\\\"y\\\\\\\": 0.5\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1174104495,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1174104495,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Color\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"r\\\\\\\": 0.0,\\\\n        \\\\\\\"g\\\\\\\": 0.0,\\\\n        \\\\\\\"b\\\\\\\":
+    0.0,\\\\n        \\\\\\\"a\\\\\\\": 0.364705890417099\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Matrix4x4,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1472684933,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1472684933,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Matrix\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Material,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1227715037,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1227715037,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Material\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":218042219,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    218042219,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Z Offset\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    100.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":1692102720,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1692102720,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"UI Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[UnityEngine.Sprite,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1988690285,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1988690285,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Sprite\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true,\\\"m_PreserveAspect\\\":false}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Nodes.Builder.Vector2ConstructorNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"c3c774a8-cade-4034-b1c9-f2ed1944925e\\\",\\\"m_Name\\\":\\\"Vector2ConstructorNode\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-417.421875,\\\"y\\\":1082.0574951171875,\\\"width\\\":197.0,\\\"height\\\":101.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":372029398,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    372029398,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"x\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    1.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":372029397,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    372029397,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"y\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    0.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1985798546,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1985798546,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Out\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Nodes.Math.ClampFLoat\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"709f319e-5f3c-44d9-a475-99630468767c\\\",\\\"m_Name\\\":\\\"ClampFLoat\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-744.421875,\\\"y\\\":1040.0574951171875,\\\"width\\\":189.0,\\\"height\\\":125.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":0,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    0,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"val\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":1,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"min\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    0.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":2,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    2,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"max\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    1.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":3,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    3,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Out\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true}\"},{\"typeInfo\":{\"fullName\":\"UINodeEditor.Elements.SimpleImageNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"7ef628a7-916a-414e-a107-9f3a83c1f0db\\\",\\\"m_Name\\\":\\\"Health
+    Icon\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-49.09077072143555,\\\"y\\\":1190.6441650390625,\\\"width\\\":280.0,\\\"height\\\":394.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":667645442,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    667645442,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": true,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1502598840,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1502598840,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Position\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": -42.0,\\\\n        \\\\\\\"y\\\\\\\": 8.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-837447911,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -837447911,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Size\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 32.0,\\\\n        \\\\\\\"y\\\\\\\": 32.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1040635801,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1040635801,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Min\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-967830567,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -967830567,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Max\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":847480279,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    847480279,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Min %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 1.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1311530575,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1311530575,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Max %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 1.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":2053093505,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    2053093505,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Pivot %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.5,\\\\n        \\\\\\\"y\\\\\\\": 0.5\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1174104495,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1174104495,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Color\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"r\\\\\\\": 1.0,\\\\n        \\\\\\\"g\\\\\\\": 1.0,\\\\n        \\\\\\\"b\\\\\\\":
+    1.0,\\\\n        \\\\\\\"a\\\\\\\": 1.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Matrix4x4,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1472684933,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1472684933,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Matrix\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Material,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1227715037,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1227715037,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Material\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":218042219,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    218042219,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Z Offset\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    0.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":1692102720,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1692102720,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"UI Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[UnityEngine.Sprite,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1988690285,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1988690285,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Sprite\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true,\\\"m_PreserveAspect\\\":false}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Nodes.ExposedReferenceNode`1[[UnityEngine.Sprite,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"b2d8c217-1b01-4371-b0bf-396b830b3579\\\",\\\"m_Name\\\":\\\"Reference\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-324.29071044921877,\\\"y\\\":1470.6451416015625,\\\"width\\\":127.0,\\\"height\\\":110.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[UnityEngine.Sprite,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-224196905,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -224196905,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Reference\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Nodes.ExposedReferenceNode`1[[UnityEngine.Material,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"5537e49b-aef1-4270-8f56-ac35441358e6\\\",\\\"m_Name\\\":\\\"Reference\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":true,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":300.10498046875,\\\"y\\\":1185.2493896484375,\\\"width\\\":145.0,\\\"height\\\":110.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.GetterSlot`1[[UnityEngine.Material,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-224196905,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -224196905,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Reference\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true}\"},{\"typeInfo\":{\"fullName\":\"UINodeEditor.Elements.SimpleImageNode\"},\"JSONnodeData\":\"{\\\"m_GuidSerialized\\\":\\\"56a24582-5be6-4dd2-8f24-ac91534c1c58\\\",\\\"m_Name\\\":\\\"Color
+    BG\\\",\\\"m_DrawState\\\":{\\\"m_Expanded\\\":false,\\\"m_Position\\\":{\\\"serializedVersion\\\":\\\"2\\\",\\\"x\\\":-162.54067993164063,\\\"y\\\":743.0455322265625,\\\"width\\\":224.0,\\\"height\\\":106.0}},\\\"m_SerializableSlots\\\":[{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":667645442,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    667645442,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": true,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1502598840,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1502598840,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Position\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-837447911,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -837447911,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Size\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1040635801,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1040635801,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Min\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 8.0,\\\\n        \\\\\\\"y\\\\\\\": 8.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-967830567,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -967830567,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Offset Max\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 32.0,\\\\n        \\\\\\\"y\\\\\\\": 8.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":847480279,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    847480279,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Min %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.0,\\\\n        \\\\\\\"y\\\\\\\": 0.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1311530575,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1311530575,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Anchor Max %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 1.0,\\\\n        \\\\\\\"y\\\\\\\": 1.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":2053093505,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    2053093505,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Pivot %\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"x\\\\\\\": 0.5,\\\\n        \\\\\\\"y\\\\\\\": 0.5\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1174104495,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1174104495,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Color\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    {\\\\n        \\\\\\\"r\\\\\\\": 1.0,\\\\n        \\\\\\\"g\\\\\\\": 1.0,\\\\n        \\\\\\\"b\\\\\\\":
+    1.0,\\\\n        \\\\\\\"a\\\\\\\": 1.0\\\\n    }\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Matrix4x4,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1472684933,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1472684933,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Matrix\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.Slots.DefaultValueSlot`1[[UnityEngine.Material,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":-1227715037,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    -1227715037,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Material\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":218042219,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    218042219,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Z Offset\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false,\\\\n    \\\\\\\"m_Value\\\\\\\":
+    0.0\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.ValueSlot`1[[System.Action`1[[UINodeEditor.UIEventData,
+    UINodeEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\\\"},\\\"index\\\":1692102720,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1692102720,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"UI Event\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    1,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"},{\\\"typeInfo\\\":{\\\"fullName\\\":\\\"NodeEditor.EmptySlot`1[[UnityEngine.Sprite,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\\\"},\\\"index\\\":1988690285,\\\"JSONnodeData\\\":\\\"{\\\\n    \\\\\\\"m_Id\\\\\\\":
+    1988690285,\\\\n    \\\\\\\"m_DisplayName\\\\\\\": \\\\\\\"Sprite\\\\\\\",\\\\n    \\\\\\\"m_SlotType\\\\\\\":
+    0,\\\\n    \\\\\\\"m_AllowMultipleConnections\\\\\\\": false,\\\\n    \\\\\\\"m_Priority\\\\\\\":
+    2147483647,\\\\n    \\\\\\\"m_Hidden\\\\\\\": false\\\\n}\\\"}],\\\"m_Priority\\\":0,\\\"m_PreviewExpanded\\\":true,\\\"m_PreserveAspect\\\":false}\"}],\"m_SerializableEdges\":[{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":1375360732,\\\"m_NodeGUIDSerialized\\\":\\\"f785e2e5-ff4e-4a90-9001-e93007a9d3cf\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":-871204680,\\\"m_NodeGUIDSerialized\\\":\\\"fed3882c-3e14-439b-ba7f-89c44ac96f88\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":696030448,\\\"m_NodeGUIDSerialized\\\":\\\"f785e2e5-ff4e-4a90-9001-e93007a9d3cf\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":-1472684933,\\\"m_NodeGUIDSerialized\\\":\\\"fed3882c-3e14-439b-ba7f-89c44ac96f88\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":-1985798546,\\\"m_NodeGUIDSerialized\\\":\\\"298d2b74-0066-42aa-b2fe-f04a0f53ca69\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":0,\\\"m_NodeGUIDSerialized\\\":\\\"bfabbc4e-eba3-4369-bda6-fc619d12935d\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":-1985798546,\\\"m_NodeGUIDSerialized\\\":\\\"298d2b74-0066-42aa-b2fe-f04a0f53ca69\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":0,\\\"m_NodeGUIDSerialized\\\":\\\"74aaeb95-f760-4fb0-854e-0aec032cca8d\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":3,\\\"m_NodeGUIDSerialized\\\":\\\"74aaeb95-f760-4fb0-854e-0aec032cca8d\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":1803358415,\\\"m_NodeGUIDSerialized\\\":\\\"62a82389-7517-4f44-9052-fcd407539a82\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":1692102720,\\\"m_NodeGUIDSerialized\\\":\\\"594c91f7-b67a-44e7-98a3-ca198f5202eb\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":1692102720,\\\"m_NodeGUIDSerialized\\\":\\\"fed3882c-3e14-439b-ba7f-89c44ac96f88\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":1692102720,\\\"m_NodeGUIDSerialized\\\":\\\"bd37a50b-a056-4da1-b315-8b1f6529cf89\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":667645442,\\\"m_NodeGUIDSerialized\\\":\\\"594c91f7-b67a-44e7-98a3-ca198f5202eb\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":1,\\\"m_NodeGUIDSerialized\\\":\\\"bfabbc4e-eba3-4369-bda6-fc619d12935d\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":-871204755,\\\"m_NodeGUIDSerialized\\\":\\\"2cbe855f-1f83-4245-8441-d09677d17645\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":1692102720,\\\"m_NodeGUIDSerialized\\\":\\\"2cbe855f-1f83-4245-8441-d09677d17645\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":667645442,\\\"m_NodeGUIDSerialized\\\":\\\"594c91f7-b67a-44e7-98a3-ca198f5202eb\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":-1985798546,\\\"m_NodeGUIDSerialized\\\":\\\"c3c774a8-cade-4034-b1c9-f2ed1944925e\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":-1311530575,\\\"m_NodeGUIDSerialized\\\":\\\"bd37a50b-a056-4da1-b315-8b1f6529cf89\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":3,\\\"m_NodeGUIDSerialized\\\":\\\"74aaeb95-f760-4fb0-854e-0aec032cca8d\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":0,\\\"m_NodeGUIDSerialized\\\":\\\"709f319e-5f3c-44d9-a475-99630468767c\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":3,\\\"m_NodeGUIDSerialized\\\":\\\"709f319e-5f3c-44d9-a475-99630468767c\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":372029397,\\\"m_NodeGUIDSerialized\\\":\\\"c3c774a8-cade-4034-b1c9-f2ed1944925e\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":-224196905,\\\"m_NodeGUIDSerialized\\\":\\\"b2d8c217-1b01-4371-b0bf-396b830b3579\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":1988690285,\\\"m_NodeGUIDSerialized\\\":\\\"7ef628a7-916a-414e-a107-9f3a83c1f0db\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":-224196905,\\\"m_NodeGUIDSerialized\\\":\\\"5537e49b-aef1-4270-8f56-ac35441358e6\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":-1227715037,\\\"m_NodeGUIDSerialized\\\":\\\"594c91f7-b67a-44e7-98a3-ca198f5202eb\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":-1174104495,\\\"m_NodeGUIDSerialized\\\":\\\"62a82389-7517-4f44-9052-fcd407539a82\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":-1174104495,\\\"m_NodeGUIDSerialized\\\":\\\"56a24582-5be6-4dd2-8f24-ac91534c1c58\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":1692102720,\\\"m_NodeGUIDSerialized\\\":\\\"56a24582-5be6-4dd2-8f24-ac91534c1c58\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":667645442,\\\"m_NodeGUIDSerialized\\\":\\\"594c91f7-b67a-44e7-98a3-ca198f5202eb\\\"},\\\"m_Priority\\\":0}\"},{\"typeInfo\":{\"fullName\":\"NodeEditor.Edge\"},\"JSONnodeData\":\"{\\\"m_OutputSlot\\\":{\\\"m_SlotId\\\":1692102720,\\\"m_NodeGUIDSerialized\\\":\\\"7ef628a7-916a-414e-a107-9f3a83c1f0db\\\"},\\\"m_InputSlot\\\":{\\\"m_SlotId\\\":667645442,\\\"m_NodeGUIDSerialized\\\":\\\"594c91f7-b67a-44e7-98a3-ca198f5202eb\\\"},\\\"m_Priority\\\":0}\"}],\"m_Path\":\"\"}"}'
