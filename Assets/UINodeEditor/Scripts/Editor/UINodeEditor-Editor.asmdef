@@ -1,11 +1,16 @@
 {
     "name": "UINodeEditor-Editor",
     "references": [
-        "UINodeEditor",
-        "NodeEditor-Editor"
+        "GUID:fe8f2b39119de0041a2f3ec51a5559ff",
+        "GUID:d291df36c71d47e4bbe54fc907b21837",
+        "GUID:cbb877376518c7347a6aceedec60645e"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
 }

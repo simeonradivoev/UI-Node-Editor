@@ -10,8 +10,7 @@ namespace UINodeEditor
 	[CreateAssetMenu]
 	public class UIGraphObject : GraphObjectBase, IReferenceTable, ISerializationCallbackReceiver, IPropertyTable
 	{
-		[SerializeField] public bool threaded;
-		private Dictionary<Guid, Object> m_References = new Dictionary<Guid, Object>();
+        private Dictionary<Guid, Object> m_References = new Dictionary<Guid, Object>();
 		[SerializeField, HideInInspector] private List<ReferenceEntry> m_SerializedReferences = new List<ReferenceEntry>();
 		[SerializeField, HideInInspector] private TextAsset m_DataAsset;
 		[SerializeField, HideInInspector] private string m_SerializedGraph;
@@ -71,7 +70,7 @@ namespace UINodeEditor
 
 		public void OnBeforeSerialize()
 		{
-			var elementData = SerializationHelper.Serialize(graph, false);
+			var elementData = SerializationHelper.Serialize(graph);
 			m_SerializedGraph = JsonUtility.ToJson(elementData);
 
 			m_SerializedReferences.Clear();

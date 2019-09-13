@@ -12,15 +12,16 @@ namespace UINodeEditor
 	{
 		[SerializeField,Range(0,600)] private float m_Health;
 		[SerializeField] private UIGraphObject m_Graph;
+        [SerializeField] private bool m_Threaded;
 		private Guid m_HealthId = StringToGUID.Get("health");
 		private CommandBuffer m_CommandBuffer;
-		private UIRenderBuffer m_RenderBuffer;
+        private UIGraphRenderer m_Renderer;
 
-		private void Awake()
+        private void Awake()
 		{
-			m_CommandBuffer = new CommandBuffer();
-			m_RenderBuffer = new UIRenderBuffer();
-		}
+            m_CommandBuffer = new CommandBuffer {name = name};
+            m_Renderer = new UIGraphRenderer();
+        }
 
 		private void OnEnable()
 		{
@@ -35,6 +36,7 @@ namespace UINodeEditor
 		private void OnDestroy()
 		{
 			m_CommandBuffer.Dispose();
+            m_Renderer.Dispose();
 		}
 
 		private void Update()
@@ -52,24 +54,8 @@ namespace UINodeEditor
 			foreach (var node in nodes)
 				(node as ITickableNode)?.Tick();
 			Profiler.EndSample();
-			foreach (var node in nodes)
-			{
-				var masterNode = node as UIMasterNode;
-				if (masterNode != null)
-				{
-					m_CommandBuffer.Clear();
-					try
-					{
-						masterNode.Execute(m_RenderBuffer, m_CommandBuffer);
-					}
-					finally
-					{
-						m_RenderBuffer.Clear();
-					}
-					break;
-				}
-			}
-			Profiler.EndSample();
+            m_Renderer.PopulateCommandBuffer(m_Threaded, nodes,m_CommandBuffer);
+            Profiler.EndSample();
 			foreach (var node in nodes)
 				(node as AbstractUINode)?.ClearDirty();
 		}

@@ -89,11 +89,8 @@ namespace UINodeEditor.Elements
 		private ValueSlot<Color> m_Color;
 		private DefaultValueSlot<Matrix4x4> m_Matrix;
 		private EmptySlot<Material> m_Material;
-		private MaterialPropertyBlock m_PropertyBlock;
-		private Mesh m_Mesh;
-		private UIVertexHelper m_VertexHelper;
-		private TextGenerationSettings settings;
-		private TextGenerator m_TextGenerator;
+        private TextGenerationSettings settings;
+		private TextGenerator m_TextGenerator = new TextGenerator();
 		private FontData m_FontData;
 		private IList<UIVertex> m_TextVerts;
 
@@ -112,21 +109,16 @@ namespace UINodeEditor.Elements
 
 		public void OnEnable()
 		{
-			m_Mesh = new Mesh();
-			m_VertexHelper = new UIVertexHelper();
-			m_PropertyBlock = new MaterialPropertyBlock();
-			m_TextGenerator = new TextGenerator();
-			m_Font.SetDefaultValue(Resources.GetBuiltinResource<Font>("Arial.ttf"));
+            m_Font.SetDefaultValue(Resources.GetBuiltinResource<Font>("Arial.ttf"));
 		}
 
-		public override void Dispose()
-		{
-			base.Dispose();
-			UnityEngine.Object.DestroyImmediate(m_Mesh);
-			m_TextGenerator = null;
-		}
+        public override void Dispose()
+        {
+            base.Dispose();
+            ((IDisposable)m_TextGenerator)?.Dispose();
+        }
 
-		protected override void Execute(UIEventData eventData,Rect rect)
+        protected override void Execute(UIEventData eventData,Rect rect)
 		{
 			if (eventData.EventType == UIEventType.Layout)
 			{
@@ -153,19 +145,19 @@ namespace UINodeEditor.Elements
 			{
 				var fontSize = m_FontSize[this];
 				float pixelPerUnit = GetPixelsPerUnit(m_FontData, fontSize);
-				lock (m_VertexHelper)
-				{
-					RebuildMesh(m_VertexHelper, pixelPerUnit);
-				}
-			}
+                var vertexHelper = eventData.MeshRepository.GetVertexHelper(guid);
+                RebuildMesh(vertexHelper, pixelPerUnit);
+            }
 			else if (eventData.EventType == UIEventType.Repaint)
 			{
 				var matrix = m_Matrix[this];
 				var mat = m_Material[this];
-				
-				m_VertexHelper.FillMesh(m_Mesh);
-				m_VertexHelper.Clear();
-				eventData.RenderBuffer.Render(m_Mesh, matrix * Matrix4x4.Translate(rect.position), mat ?? m_FontData.material, m_PropertyBlock);
+
+                var vertexHelper = eventData.MeshRepository.GetVertexHelper(guid);
+                var mesh = eventData.MeshRepository.GetMesh(guid);
+                vertexHelper.FillMesh(mesh);
+
+                eventData.RenderBuffer.Render(mesh, matrix * Matrix4x4.Translate(rect.position), mat ?? m_FontData.material, null);
 			}
 
 			base.Execute(eventData,rect);

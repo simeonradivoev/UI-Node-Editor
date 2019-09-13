@@ -10,8 +10,9 @@ namespace UINodeEditor
 		public UIThreadWaitHandle WaitHandle;
 		public UIRenderBuffer RenderBuffer;
 		public VertexHelper VertexHelper;
+        public MeshRepository MeshRepository;
 
-		public Rect GetRect(Rect child)
+        public Rect GetRect(Rect child)
 		{
 			child.position += Rect.position;
 			return child;

@@ -15,9 +15,6 @@ public abstract class GraphicNode : UIElementNode, IOnAssetEnabled
 	protected DefaultValueSlot<Material> m_Material;
 	protected ValueSlot<float> m_ZOffset;
 
-	protected UIVertexHelper m_VertexHelper;
-	protected Mesh m_Mesh;
-	protected MaterialPropertyBlock m_PropertyBlock;
 	protected int m_MainTexProp;
 
 	protected GraphicNode()
@@ -33,9 +30,6 @@ public abstract class GraphicNode : UIElementNode, IOnAssetEnabled
 
 	public void OnEnable()
 	{
-		m_Mesh = new Mesh();
-		m_VertexHelper = new UIVertexHelper();
-		m_PropertyBlock = new MaterialPropertyBlock();
 		m_MainTexProp = Shader.PropertyToID("_MainTex");
 		if (m_DefaultMaterial == null) m_DefaultMaterial = new Material(Shader.Find("Sprites/Default")){hideFlags = HideFlags.DontSave};
 		if (m_Material.value == null) m_Material.SetDefaultValue(m_DefaultMaterial);
@@ -107,11 +101,5 @@ public abstract class GraphicNode : UIElementNode, IOnAssetEnabled
 
 		vertexHelper.AddTriangle(startIndex, startIndex + 1, startIndex + 2);
 		vertexHelper.AddTriangle(startIndex + 2, startIndex + 3, startIndex);
-	}
-
-	public override void Dispose()
-	{
-		base.Dispose();
-		UnityEngine.Object.DestroyImmediate(m_Mesh);
 	}
 }

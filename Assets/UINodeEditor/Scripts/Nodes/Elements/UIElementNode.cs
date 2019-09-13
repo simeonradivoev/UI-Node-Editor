@@ -49,8 +49,15 @@ namespace UINodeEditor.Elements
 				max.x = parentRect.x + position.x + size.x + parentRect.width * anchorMax.x - offsetMax.x;
 				max.y = parentRect.y + position.y + size.y + parentRect.height * anchorMax.y - offsetMax.y;
 
-				Execute(eventData, new Rect(min.x,min.y,max.x - min.x,max.y - min.y));
-			}
+                try
+                {
+                    Execute(eventData, new Rect(min.x, min.y, max.x - min.x, max.y - min.y));
+                }
+                catch (Exception e)
+                {
+                    Debug.LogException(e);
+                }
+            }
 			finally
 			{
 				if (eventData.WaitHandle != null) eventData.WaitHandle.MarkDone();

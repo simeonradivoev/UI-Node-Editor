@@ -4,6 +4,10 @@ using UnityEngine.Rendering;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// Render buffer is a middle step between the node calculations and the final command buffer that is used by unity.
+    /// It holds info on meshes to be rendered.
+    /// </summary>
 	public class UIRenderBuffer
 	{
 		private struct RenderElement
@@ -36,6 +40,12 @@ namespace UINodeEditor
 			m_RenderElements.Enqueue(new RenderElement() { Mesh = mesh, Material = material, Matrix = matrix});
 		}
 
+        /// <summary>
+        /// Populate a command buffer used by unity with all the render actions enqueued.
+        /// </summary>
+        /// <remarks>Note that the command buffer is not cleared and should be done so before calling this method.</remarks>
+        /// <param name="commandBuffer">The command buffer to populate.</param>
+        /// <param name="matrix">The global matrix that will multiple all render actions.</param>
 		public void Populate(CommandBuffer commandBuffer,Matrix4x4 matrix)
 		{
 			foreach (var element in m_RenderElements)
@@ -44,6 +54,9 @@ namespace UINodeEditor
 			}
 		}
 
+        /// <summary>
+        /// Clear all queued render actions.
+        /// </summary>
 		public void Clear()
 		{
 			m_RenderElements.Clear();

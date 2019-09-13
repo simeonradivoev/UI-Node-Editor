@@ -112,22 +112,27 @@ namespace UINodeEditor.Elements
 				var fillAmount = Mathf.Clamp01(m_FillAmount[this]);
 				var color = m_Color[this];
 				var pivot = m_Pivot[this];
-				lock (m_VertexHelper)
-				{
-					GenerateFilledSprite(m_VertexHelper, m_SpriteData, rect, pivot, color, fillAmount);
-				}
-			}
+                var vertexHelper = eData.MeshRepository.GetVertexHelper(guid);
+                GenerateFilledSprite(vertexHelper, m_SpriteData, rect, pivot, color, fillAmount);
+            }
 			else if (eData.EventType == UIEventType.Repaint)
 			{
 				var sprite = m_SpriteInput[this];
 				var matrix = m_Matrix[this];
 				var mat = m_Material[this];
 
-				m_VertexHelper.FillMesh(m_Mesh);
-				m_VertexHelper.Clear();
-				m_PropertyBlock.Clear();
-				if (sprite != null) m_PropertyBlock.SetTexture(m_MainTexProp, sprite.texture);
-				eData.RenderBuffer.Render(m_Mesh, matrix * Matrix4x4.Translate(new Vector3(0, 0, m_ZOffset[this])), mat, m_PropertyBlock);
+                var vertexHelper = eData.MeshRepository.GetVertexHelper(guid);
+                var mesh = eData.MeshRepository.GetMesh(guid);
+                MaterialPropertyBlock propertyBlock = null;
+
+                vertexHelper.FillMesh(mesh);
+
+                if (sprite != null)
+                {
+                    propertyBlock = eData.MeshRepository.GetPropertyBLock(guid);
+                    propertyBlock.SetTexture(m_MainTexProp, sprite.texture);
+                }
+				eData.RenderBuffer.Render(mesh, matrix * Matrix4x4.Translate(new Vector3(0, 0, m_ZOffset[this])), mat, propertyBlock);
 			}
 			base.Execute(eData, rect);
 		}

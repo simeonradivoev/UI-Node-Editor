@@ -11,18 +11,23 @@ using UnityEngine.Rendering;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// Master node is the main node in each graph. It acts like a canvas for the UI.
+    /// It executes the calculations and gets the values from all children connected to it.
+    /// It also has the rect and matrix of the "canvas".
+    /// </summary>
 	[Title("UI Master Node")]
-	public class UIMasterNode : AbstractNode, IOnAssetEnabled
+	public class UIMasterNode : AbstractNode
 	{
 		private EmptySlot<Action<UIEventData>> m_Input;
 		private DefaultValueSlot<Matrix4x4> m_Matrix;
 		private ValueSlot<Rect> m_Rect;
 		private List<KeyValuePair<ISlot, INode>> m_TmpSlots;
-		private Mesh mesh;
-		private List<Action<UIEventData>> m_ValuesTmp = new List<Action<UIEventData>>();
-		private UIThreadWaitHandle waitHandle = new UIThreadWaitHandle();
 
-		public UIMasterNode()
+        public Matrix4x4 matrix => m_Matrix[this];
+        public Rect rect => m_Rect[this];
+
+        public UIMasterNode()
 		{
 			name = "UI Master Node";
 			m_Input = CreateInputSlot<EmptySlot<Action<UIEventData>>>("UI Event");
@@ -31,66 +36,10 @@ namespace UINodeEditor
 			m_Matrix = CreateInputSlot<DefaultValueSlot<Matrix4x4>>("Matrix").SetDefaultValue(Matrix4x4.identity);
 		}
 
-		public void OnEnable()
-		{
-			mesh = new Mesh();
-		}
 
-		public override void Dispose()
-		{
-			base.Dispose();
-			UnityEngine.Object.DestroyImmediate(mesh);
-		}
-
-		public void Execute(UIRenderBuffer renderBuffer,CommandBuffer commandBuffer)
-		{
-			GetSlotValues(m_Input, m_ValuesTmp);
-
-			Rect rect = m_Rect[this];
-			Rect localRect = new Rect(Vector2.zero, rect.size);
-
-			foreach (var value in m_ValuesTmp)
-			{
-				value.Invoke(new UIEventData(){EventType = UIEventType.Layout,Rect = localRect });
-			}
-
-			if (((UIGraphObject) owner.owner).threaded)
-			{
-				waitHandle.Reset(m_ValuesTmp.Count);
-
-				foreach (var a in m_ValuesTmp)
-				{
-					var a1 = a;
-					ThreadPool.QueueUserWorkItem(c => a1.Invoke((UIEventData)c), new UIEventData() { EventType = UIEventType.PreRepaint, Rect = localRect, RenderBuffer = renderBuffer, WaitHandle = waitHandle });
-				}
-
-				waitHandle.WaitAll();
-			}
-			else
-			{
-				foreach (var action in m_ValuesTmp)
-				{
-					action.Invoke(new UIEventData() { EventType = UIEventType.PreRepaint, Rect = localRect, RenderBuffer = renderBuffer});
-				}
-			}
-			
-
-			foreach (var value in m_ValuesTmp)
-			{
-				try
-				{
-					value.Invoke(new UIEventData() { EventType = UIEventType.Repaint, Rect = localRect, RenderBuffer = renderBuffer });
-				}
-				catch (Exception e)
-				{
-					Debug.LogException(e);
-				}
-			}
-
-			var matrix = m_Matrix[this] * Matrix4x4.Translate(rect.position);
-			renderBuffer.Populate(commandBuffer, matrix);
-
-			m_ValuesTmp.Clear();
-		}
-	}
+        public void GetInputValues(IList<Action<UIEventData>> values)
+        {
+            GetSlotValues(m_Input, values);
+        }
+    }
 }
