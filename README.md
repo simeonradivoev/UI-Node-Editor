@@ -12,4 +12,4 @@ To open the node editor double click the example graph asset located in the same
 This project includes BOXOPHOBIC's FREE Skybox - Cubemap Extended asset for preview purposes
 
 ## Inspiration
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/H1MLtML0np0/0.jpg)](https://www.youtube.com/watch?v=H1MLtML0np0) hellllo 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/H1MLtML0np0/0.jpg)](https://www.youtube.com/watch?v=H1MLtML0np0)
