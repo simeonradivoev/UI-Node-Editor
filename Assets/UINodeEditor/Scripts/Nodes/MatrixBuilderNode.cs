@@ -15,8 +15,8 @@ namespace UINodeEditor
 			name = "Matrix Builder";
 			CreateOutputSlot<GetterSlot<Matrix4x4>>("Out").SetGetter(() => Matrix4x4.TRS(m_Pos[this], m_Rot[this], m_Scale[this]));
 			m_Pos = CreateInputSlot<ValueSlot<Vector3>>("Position").SetShowControl();
-			m_Rot = CreateInputSlot<ValueSlot<Quaternion>>("Rotation").SetShowControl();
-			m_Scale = CreateInputSlot<ValueSlot<Vector3>>("Scale").SetShowControl();
+			m_Rot = CreateInputSlot<ValueSlot<Quaternion>>("Rotation").SetValue(Quaternion.identity).SetShowControl();
+			m_Scale = CreateInputSlot<ValueSlot<Vector3>>("Scale").SetValue(Vector3.one).SetShowControl();
 		}
 	}
 }

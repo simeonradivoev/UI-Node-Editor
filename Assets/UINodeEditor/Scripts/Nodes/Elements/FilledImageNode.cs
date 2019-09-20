@@ -112,12 +112,15 @@ namespace UINodeEditor.Elements
 				var fillAmount = Mathf.Clamp01(m_FillAmount[this]);
 				var color = m_Color[this];
 				var pivot = m_Pivot[this];
+                Rect localRect = new Rect(-pivot.x * rect.width,-pivot.y * rect.height,rect.width,rect.height);
+
                 var vertexHelper = eData.MeshRepository.GetVertexHelper(guid);
-                GenerateFilledSprite(vertexHelper, m_SpriteData, rect, pivot, color, fillAmount);
+                GenerateFilledSprite(vertexHelper, m_SpriteData, localRect, pivot, color, fillAmount);
             }
 			else if (eData.EventType == UIEventType.Repaint)
 			{
-				var sprite = m_SpriteInput[this];
+                var pivot = m_Pivot[this];
+                var sprite = m_SpriteInput[this];
 				var matrix = m_Matrix[this];
 				var mat = m_Material[this];
 
@@ -132,7 +135,7 @@ namespace UINodeEditor.Elements
                     propertyBlock = eData.MeshRepository.GetPropertyBLock(guid);
                     propertyBlock.SetTexture(m_MainTexProp, sprite.texture);
                 }
-				eData.RenderBuffer.Render(mesh, matrix * Matrix4x4.Translate(new Vector3(0, 0, m_ZOffset[this])), mat, propertyBlock);
+				eData.RenderBuffer.Render(mesh, Matrix4x4.Translate(new Vector3(rect.x + pivot.x * rect.width, rect.y + pivot.y * rect.height, m_ZOffset[this])) * matrix, mat, propertyBlock);
 			}
 			base.Execute(eData, rect);
 		}

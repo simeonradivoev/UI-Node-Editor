@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UINodeEditor.Math
 {
-	[Title("Math", "Multiply", "Matrix4x4")]
+	[Title("Math", "Multiply", "Multiply: Matrix4x4")]
 	public class MatrixMultiply : MultiplyNode<Matrix4x4>
 	{
 		protected override Matrix4x4 Multiply(Matrix4x4 lhs, Matrix4x4 rhs)

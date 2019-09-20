@@ -3,6 +3,7 @@ using NodeEditor;
 using NodeEditor.Controls;
 using UnityEngine;
 using UnityEngine.Sprites;
+using UnityEngine.UI;
 
 namespace UINodeEditor.Elements
 {
@@ -16,7 +17,12 @@ namespace UINodeEditor.Elements
 			public Vector4 padding;
 			public Rect rect;
 			public Vector4 outerUv;
-		}
+            public Vector2 pivot;
+            public Bounds bounds;
+            public Vector2[] vertices;
+            public Vector2[] uvs;
+            public UInt16[] triangles;
+        }
 
 		[DefaultControl(label = "Preserve Aspect")]
 		public bool preserveAspect
@@ -48,7 +54,12 @@ namespace UINodeEditor.Elements
 					{
 						padding = DataUtility.GetPadding(sprite),
 						rect = sprite.rect,
-						outerUv = DataUtility.GetOuterUV(sprite)
+						outerUv = DataUtility.GetOuterUV(sprite),
+                        pivot = sprite.pivot,
+                        vertices = sprite.vertices,
+                        uvs = sprite.uv,
+                        triangles = sprite.triangles,
+                        bounds = sprite.bounds
 					};
 				else
 					m_SpriteData = new SpriteData()
@@ -62,11 +73,21 @@ namespace UINodeEditor.Elements
 				var color = m_Color[this];
 				var pivot = m_Pivot[this];
                 var vertexHelper = eData.MeshRepository.GetVertexHelper(guid);
-                GenerateSimpleSprite(vertexHelper, m_SpriteData, rect, pivot, color);
+                var localRect = new Rect(-pivot.x * rect.width, -pivot.y * rect.height, rect.width, rect.height);
+                if (m_SpriteData.vertices != null)
+                {
+                    GenerateSprite(vertexHelper, m_SpriteData, localRect, pivot, color);
+                }
+                else
+                {
+                    GenerateSimpleSprite(vertexHelper, m_SpriteData, localRect, pivot, color);
+                }
+                
             }
 			else if (eData.EventType == UIEventType.Repaint)
 			{
-				var sprite = m_SpriteInput[this];
+                var pivot = m_Pivot[this];
+                var sprite = m_SpriteInput[this];
 				var matrix = m_Matrix[this];
 				var mat = m_Material[this];
 
@@ -81,7 +102,7 @@ namespace UINodeEditor.Elements
                     propertyBlock.SetTexture(m_MainTexProp, sprite.texture);
                 }
 
-				eData.RenderBuffer.Render(mesh, matrix * Matrix4x4.Translate(new Vector3(0,0,m_ZOffset[this])), mat, propertyBlock);
+				eData.RenderBuffer.Render(mesh, Matrix4x4.Translate(new Vector3(rect.x + pivot.x * rect.width, rect.y + pivot.y * rect.width, m_ZOffset[this])) * matrix, mat, propertyBlock);
 			}
 			base.Execute(eData, rect);
 		}
@@ -89,7 +110,7 @@ namespace UINodeEditor.Elements
 		private void GenerateSimpleSprite(UIVertexHelper vh, SpriteData sprite, Rect rect,Vector2 pivot, Color color)
 		{
 			Vector4 v = GetDrawingDimensions(sprite.padding,sprite.rect.size, pivot, rect, preserveAspect);
-			var uv = sprite.outerUv;
+            var uv = sprite.outerUv;
 
 			var color32 = color;
 			vh.Clear();
@@ -101,5 +122,61 @@ namespace UINodeEditor.Elements
 			vh.AddTriangle(0, 1, 2);
 			vh.AddTriangle(2, 3, 0);
 		}
-	}
+
+        private void GenerateSprite(UIVertexHelper vh, SpriteData sprite, Rect rect, Vector2 pivot, Color color)
+        {
+            var spriteSize = new Vector2(sprite.rect.width, sprite.rect.height);
+
+            // Covert sprite pivot into normalized space.
+            var spritePivot = sprite.pivot / spriteSize;
+            var rectPivot = pivot;
+            Rect r = rect;
+
+            if (preserveAspect & spriteSize.sqrMagnitude > 0.0f)
+            {
+                PreserveSpriteAspectRatio(ref r, spriteSize,pivot);
+            }
+
+            var drawingSize = new Vector2(r.width, r.height);
+            var spriteBoundSize = sprite.bounds.size;
+
+            // Calculate the drawing offset based on the difference between the two pivots.
+            var drawOffset = (rectPivot - spritePivot) * drawingSize;
+
+            var color32 = color;
+            vh.Clear();
+
+            Vector2[] vertices = sprite.vertices;
+            Vector2[] uvs = sprite.uvs;
+            for (int i = 0; i < vertices.Length; ++i)
+            {
+                vh.AddVert(new Vector3((vertices[i].x / spriteBoundSize.x) * drawingSize.x - drawOffset.x, (vertices[i].y / spriteBoundSize.y) * drawingSize.y - drawOffset.y), color32, new Vector2(uvs[i].x, uvs[i].y));
+            }
+
+            UInt16[] triangles = sprite.triangles;
+            for (int i = 0; i < triangles.Length; i += 3)
+            {
+                vh.AddTriangle(triangles[i + 0], triangles[i + 1], triangles[i + 2]);
+            }
+        }
+
+        private void PreserveSpriteAspectRatio(ref Rect rect, Vector2 spriteSize,Vector2 pivot)
+        {
+            var spriteRatio = spriteSize.x / spriteSize.y;
+            var rectRatio = rect.width / rect.height;
+
+            if (spriteRatio > rectRatio)
+            {
+                var oldHeight = rect.height;
+                rect.height = rect.width * (1.0f / spriteRatio);
+                rect.y += (oldHeight - rect.height) * pivot.y;
+            }
+            else
+            {
+                var oldWidth = rect.width;
+                rect.width = rect.height * spriteRatio;
+                rect.x += (oldWidth - rect.width) * pivot.x;
+            }
+        }
+    }
 }

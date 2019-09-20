@@ -52,24 +52,10 @@ public abstract class GraphicNode : UIElementNode, IOnAssetEnabled
 
 		if (shouldPreserveAspect && size.sqrMagnitude > 0.0f)
 		{
-			var spriteRatio = size.x / size.y;
-			var rectRatio = r.width / r.height;
+            PreserveSpriteAspectRatio(ref r, size, pivot);
+        }
 
-			if (spriteRatio > rectRatio)
-			{
-				var oldHeight = r.height;
-				r.height = r.width * (1.0f / spriteRatio);
-				r.y += (oldHeight - r.height) * pivot.y;
-			}
-			else
-			{
-				var oldWidth = r.width;
-				r.width = r.height * spriteRatio;
-				r.x += (oldWidth - r.width) * pivot.x;
-			}
-		}
-
-		v = new Vector4(
+        v = new Vector4(
 			r.x + r.width * v.x,
 			r.y + r.height * v.y,
 			r.x + r.width * v.z,
@@ -79,7 +65,27 @@ public abstract class GraphicNode : UIElementNode, IOnAssetEnabled
 		return v;
 	}
 
-	protected static void AddQuad(UIVertexHelper vertexHelper, Vector3[] quadPositions, Color32 color, Vector3[] quadUVs)
+    private void PreserveSpriteAspectRatio(ref Rect rect, Vector2 spriteSize,Vector2 pivot)
+    {
+        var spriteRatio = spriteSize.x / spriteSize.y;
+        var rectRatio = rect.width / rect.height;
+
+        if (spriteRatio > rectRatio)
+        {
+            var oldHeight = rect.height;
+            rect.height = rect.width * (1.0f / spriteRatio);
+            rect.y += (oldHeight - rect.height) * pivot.y;
+        }
+        else
+        {
+            var oldWidth = rect.width;
+            rect.width = rect.height * spriteRatio;
+            rect.x += (oldWidth - rect.width) * pivot.x;
+        }
+    }
+
+
+    protected static void AddQuad(UIVertexHelper vertexHelper, Vector3[] quadPositions, Color32 color, Vector3[] quadUVs)
 	{
 		int startIndex = vertexHelper.currentVertCount;
 
