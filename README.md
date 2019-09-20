@@ -9,6 +9,17 @@ A Unity node editor for making Immediate mode UIs.
 ### Inspector Preview
 ![Editor](https://github.com/simeonradivoev/UI-Node-Editor/raw/master/Screenshots/Inspector%20Preview.png)
 
+# Installation
+
+The UI node editor has a git sub module that needs to be initialized. For more info on submodules check [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+Once cloned, run the following commands:
+
+```
+git submodule init
+git submodule update
+
+```
+
 # Instructions
 
 Open the Demo scene in `UINodeEditor/Examples`
