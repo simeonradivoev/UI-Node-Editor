@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// The camera node provides properties from the main camera.
+    /// </summary>
 	[Title("Input","Camera")]
 	public class CameraNode : AbstractNode
 	{

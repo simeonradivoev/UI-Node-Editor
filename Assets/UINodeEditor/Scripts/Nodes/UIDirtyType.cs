@@ -2,6 +2,9 @@
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// Flags that indicated by what kind of operation was a UI dirtied by.
+    /// </summary>
 	[Flags]
 	public enum UIDirtyType
 	{

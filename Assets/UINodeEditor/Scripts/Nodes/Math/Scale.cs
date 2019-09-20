@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace UINodeEditor.Math
 {
+    /// <summary>
+    /// Vector4 Scale node. Scaled by a float.
+    /// </summary>
     [Title("Math", "4D", "Scale: 4D")]
     public class ScaleVector4 : AbstractNode
     {
@@ -15,6 +18,9 @@ namespace UINodeEditor.Math
         }
     }
 
+    /// <summary>
+    /// Vector3 scale node. Scaled by a float.
+    /// </summary>
     [Title("Math","3D","Scale: 3D")]
 	public class ScaleVector3 : AbstractNode
 	{
@@ -27,6 +33,9 @@ namespace UINodeEditor.Math
 		}
 	}
 
+    /// <summary>
+    /// Vector2 scale node. Scaled by a float.
+    /// </summary>
     [Title("Math", "2D", "Scale: 2D")]
     public class ScaleVector2 : AbstractNode
     {

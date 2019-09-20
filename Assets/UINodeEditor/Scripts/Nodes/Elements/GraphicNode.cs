@@ -5,6 +5,9 @@ using UINodeEditor;
 using UINodeEditor.Elements;
 using UnityEngine;
 
+/// <summary>
+/// Base node for all graphic elements.
+/// </summary>
 public abstract class GraphicNode : UIElementNode, IOnAssetEnabled
 {
 	private static Material m_DefaultMaterial;

@@ -5,6 +5,10 @@ using UnityEngine.Sprites;
 
 namespace UINodeEditor.Elements
 {
+    /// <summary>
+    /// Sliced image node that is similar to <see cref="UnityEngine.UI.Image"/> with the sliced image option enabled.
+    /// It draws a sprite image that can have corners and draw a sliced sprite.
+    /// </summary>
 	[Title("Elements","Image (Sliced)")]
 	public class SlicedImageNode : GraphicNode
 	{

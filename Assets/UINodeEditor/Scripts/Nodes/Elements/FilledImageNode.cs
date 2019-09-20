@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 namespace UINodeEditor.Elements
 {
+    /// <summary>
+    /// A filled image similar to the <see cref="Image"/> with filled image mode enabled.
+    /// It can draw a graphic that can be filled from a value.
+    /// </summary>
 	[Title("Elements","Image (Filled)")]
 	public class FilledImageNode : GraphicNode
 	{
@@ -28,6 +32,9 @@ namespace UINodeEditor.Elements
 		[SerializeField] private bool m_FillClockwise;
 		[SerializeField] private bool m_PreserveAspect;
 
+        /// <summary>
+        /// Preserve the aspect of the sprite.
+        /// </summary>
 		[DefaultControl(label = "Preserve Aspect")]
 		public bool preserveAspect
 		{

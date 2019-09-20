@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// Node that provides the 2D and 3D mouse position gotten straight from <see cref="Input"/>.
+    /// </summary>
 	[Title("Input","Mouse Position")]
 	public class MousePositionNode : AbstractNode
 	{

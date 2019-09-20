@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A rect transform node that calculates a rect value based on the anchor, offset, position and size.
+    /// </summary>
 	[Title("Builder","Rect Transform")]
 	public class RectTransformNode : AbstractUINode
 	{

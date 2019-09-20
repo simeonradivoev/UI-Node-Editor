@@ -4,6 +4,11 @@ using UnityEngine;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A matrix node that provides a screen matrix that can be used in a <see cref="UIMasterNode"/> to draw elements in screen space.
+    /// With a rect as big as the camera's pixels.
+    /// It uses the main camera from <see cref="Camera.main"/>.
+    /// </summary>
 	[Title("Input","Screen Matrix")]
 	public class ScreenMatrixNode : AbstractNode, ITickableNode
 	{
@@ -13,6 +18,10 @@ namespace UINodeEditor
 		private ValueSlot<Rect> m_ScreenRect;
 		private Camera m_CachedCamera;
 
+        /// <summary>
+        /// The distance of the UI elements from the camera.
+        /// Elements are scaled based on this distance so they appear the same size in screen space.
+        /// </summary>
 		[DefaultControl(label = "Distance")]
 		public float distance
 		{

@@ -7,6 +7,11 @@ using UnityEngine.Rendering;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A graph renderer helper that populates a command buffer from a master node by processing all of it's children.
+    /// It uses a <see cref="MeshRepository"/> to store meshes outside of the nodes.
+    /// <see cref="MeshRepository"/> had an internal mesh pool so the renderer helper needs to be disposed for these meshes to be destroyed.
+    /// </summary>
     public class UIGraphRenderer : IDisposable
     {
         private List<Action<UIEventData>> m_ValuesTmp = new List<Action<UIEventData>>();

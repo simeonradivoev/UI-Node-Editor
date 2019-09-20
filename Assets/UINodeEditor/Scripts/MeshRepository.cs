@@ -6,6 +6,13 @@ using Object = UnityEngine.Object;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A mesh repository that stores meshes for later rendering.
+    /// Each mesh, material property block and UIVertex helper is referenced by a GUID.
+    /// It also has an internal pool for meshes, property blocks and vertex helpers.
+    /// Used by <see cref="UIGraphRenderer"/>.
+    /// As the repository uses an internal mesh pool it needs to be disposed for them to be deleted as well.
+    /// </summary>
     public class MeshRepository : IDisposable
     {
         private Dictionary<Guid, Mesh> m_CurrentMeshes = new Dictionary<Guid, Mesh>();
@@ -20,6 +27,11 @@ namespace UINodeEditor
 
         private ConcurrentStack<UIVertexHelper> m_VertexHelpersPool = new ConcurrentStack<UIVertexHelper>();
 
+        /// <summary>
+        /// Get a new or existing mesh with a specified guid.
+        /// </summary>
+        /// <param name="guid">The guid of the mesh.</param>
+        /// <returns>The new or existing mesh.</returns>
         public Mesh GetMesh(Guid guid)
         {
             if (!m_CurrentMeshes.TryGetValue(guid, out Mesh mesh))
@@ -31,6 +43,11 @@ namespace UINodeEditor
             return mesh;
         }
 
+        /// <summary>
+        /// Get a new or existing material property block with a specified guid.
+        /// </summary>
+        /// <param name="guid">The guid of the material property block.</param>
+        /// <returns>The new or existing material property block.</returns>
         public MaterialPropertyBlock GetPropertyBLock(Guid guid)
         {
             if (!m_CurrentPropertyBlocks.TryGetValue(guid, out MaterialPropertyBlock block))
@@ -43,10 +60,10 @@ namespace UINodeEditor
         }
 
         /// <summary>
-        /// Thread safe way of getting a vertex helper.
+        /// Thread safe way of getting a new or existing vertex helper with a specified guid.
         /// </summary>
-        /// <param name="guid"></param>
-        /// <returns></returns>
+        /// <param name="guid">The guid of the vertex helper.</param>
+        /// <returns>The new or existing vertex helper.</returns>
         public UIVertexHelper GetVertexHelper(Guid guid)
         {
             if (!m_CurrentVertexHelpers.TryGetValue(guid, out UIVertexHelper vertexHelper))
@@ -61,6 +78,10 @@ namespace UINodeEditor
             return vertexHelper;
         }
 
+        /// <summary>
+        /// Clear all current meshes, property blocks and vertex helpers.
+        /// </summary>
+        /// <param name="delete">Should pooling be enabled or should all elements be deleted.</param>
         public void ClearCurrent(bool delete = false)
         {
             foreach (var kvp in m_CurrentMeshes)
@@ -95,6 +116,9 @@ namespace UINodeEditor
             m_CurrentVertexHelpers.Clear();
         }
 
+        /// <summary>
+        /// Deletes all current elements as well as pooled ones.
+        /// </summary>
         public void Dispose()
         {
             foreach (var kvp in m_CurrentMeshes)

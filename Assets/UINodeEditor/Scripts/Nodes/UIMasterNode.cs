@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 using NodeEditor;
 using NodeEditor.Slots;
-using NodeEditor.Util;
-using UINodeEditor.Elements;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace UINodeEditor
 {
@@ -35,7 +30,6 @@ namespace UINodeEditor
 			m_Rect = CreateInputSlot<ValueSlot<Rect>>("Rect").SetShowControl();
 			m_Matrix = CreateInputSlot<DefaultValueSlot<Matrix4x4>>("Matrix").SetDefaultValue(Matrix4x4.identity);
 		}
-
 
         public void GetInputValues(IList<Action<UIEventData>> values)
         {

@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// Builds a matrix from rect position and size.
+    /// </summary>
 	[Title("Builder","Rect Matrix")]
 	public class RectMatrixBuilderNode : AbstractNode
 	{

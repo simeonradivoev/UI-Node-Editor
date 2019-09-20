@@ -3,6 +3,9 @@ using NodeEditor;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A simple execute node.
+    /// </summary>
 	[Title("Execution Node")]
 	public class ExecutionNode : AbstractNode
 	{

@@ -7,6 +7,9 @@ using Object = UnityEngine.Object;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A graph object that holds all UI nodes as well as exposed references.
+    /// </summary>
 	[CreateAssetMenu]
 	public class UIGraphObject : GraphObjectBase, IReferenceTable, ISerializationCallbackReceiver, IPropertyTable
 	{
@@ -24,6 +27,11 @@ namespace UINodeEditor
 			public Object obj;
 		}
 
+        /// <summary>
+        /// Set an exposed reference values.
+        /// </summary>
+        /// <param name="id">The exposed reference id.</param>
+        /// <param name="value">The new value of the exposed reference.</param>
 		public void SetReferenceValue(Guid id, Object value)
 		{
 			if (m_References.ContainsKey(id))
@@ -39,6 +47,12 @@ namespace UINodeEditor
 #endif
 		}
 
+        /// <summary>
+        /// Get a value for an exposed reference.
+        /// </summary>
+        /// <param name="id">The id of the reference.</param>
+        /// <param name="idValid">Does the reference exist.</param>
+        /// <returns>The exposed reference value.</returns>
 		public Object GetReferenceValue(Guid id, out bool idValid)
 		{
 			Object val;
@@ -46,11 +60,22 @@ namespace UINodeEditor
 			return val;
 		}
 
+        /// <summary>
+        /// Remove an exposed reference with a given id.
+        /// </summary>
+        /// <param name="id">The id of the reference to remove.</param>
 		public void ClearReferenceValue(Guid id)
 		{
 			m_References.Remove(id);
 		}
 
+        /// <summary>
+        /// Get a global property value. It just calls <see cref="GlobalProperties{T}"/>.
+        /// </summary>
+        /// <typeparam name="T">The type of global property.</typeparam>
+        /// <param name="id">The id of the global property.</param>
+        /// <param name="validId">Does the id exist.</param>
+        /// <returns></returns>
 		public T GetPropertyValue<T>(Guid id, out bool validId)
 		{
 			T val;
@@ -68,7 +93,7 @@ namespace UINodeEditor
 			GlobalProperties<T>.SetValue(id,val);
 		}
 
-		public void OnBeforeSerialize()
+        void ISerializationCallbackReceiver.OnBeforeSerialize()
 		{
 			var elementData = SerializationHelper.Serialize(graph);
 			m_SerializedGraph = JsonUtility.ToJson(elementData);
@@ -80,7 +105,7 @@ namespace UINodeEditor
 			}
 		}
 
-		public void OnAfterDeserialize()
+        void ISerializationCallbackReceiver.OnAfterDeserialize()
 		{
 			try
 			{

@@ -2,6 +2,9 @@
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A wait handle for UI element nodes.
+    /// </summary>
 	public class UIThreadWaitHandle
 	{
 		private int m_ActiveCount;

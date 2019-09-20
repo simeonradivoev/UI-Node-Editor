@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 namespace UINodeEditor.Elements
 {
+    /// <summary>
+    /// A node that renders text.
+    /// </summary>
 	[Title("Elements","Text")]
 	public class TextNode : UIElementNode, IOnAssetEnabled
 	{

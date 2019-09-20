@@ -20,22 +20,48 @@ namespace UINodeEditor
 
 		private Queue<RenderElement> m_RenderElements = new Queue<RenderElement>();
 
+        /// <summary>
+        /// Queue a mesh for rendering.
+        /// </summary>
+        /// <param name="mesh">The mesh to render.</param>
+        /// <param name="pos">The position of the mesh.</param>
+        /// <param name="material">The material of the mesh.</param>
+        /// <param name="propertyBlock">The property block to be used. Can be null.</param>
 		public void Render(Mesh mesh, Vector2 pos, Material material, MaterialPropertyBlock propertyBlock)
 		{
 			m_RenderElements.Enqueue(new RenderElement() { Mesh = mesh, Material = material, Matrix = Matrix4x4.Translate(pos), PropertyBlock = propertyBlock });
 		}
 
-		public void Render(Mesh mesh, Vector2 pos, Material material)
+        /// <summary>
+        /// Queue a mesh for rendering.
+        /// </summary>
+        /// <param name="mesh">The mesh to render.</param>
+        /// <param name="pos">The position of the mesh.</param>
+        /// <param name="material">The material of the mesh.</param>
+        public void Render(Mesh mesh, Vector2 pos, Material material)
 		{
 			m_RenderElements.Enqueue(new RenderElement() { Mesh = mesh, Material = material, Matrix = Matrix4x4.Translate(pos) });
 		}
 
+        /// <summary>
+        /// Queue a mesh for rendering.
+        /// </summary>
+        /// <param name="mesh">The mesh to render.</param>
+        /// <param name="matrix">The matrix of the mesh.</param>
+        /// <param name="material">The material of the mesh.</param>
+        /// <param name="propertyBlock">The property block to be used. Can be null.</param>
 		public void Render(Mesh mesh, Matrix4x4 matrix, Material material, MaterialPropertyBlock propertyBlock)
 		{
 			m_RenderElements.Enqueue(new RenderElement(){Mesh = mesh,Material = material,Matrix = matrix,PropertyBlock = propertyBlock});
 		}
 
-		public void Render(Mesh mesh, Matrix4x4 matrix, Material material)
+        /// <summary>
+        /// Render a mesh;
+        /// </summary>
+        /// <param name="mesh">The mesh to render.</param>
+        /// <param name="matrix">The matrix of the mesh.</param>
+        /// <param name="material">The material of the mesh.</param>
+        public void Render(Mesh mesh, Matrix4x4 matrix, Material material)
 		{
 			m_RenderElements.Enqueue(new RenderElement() { Mesh = mesh, Material = material, Matrix = matrix});
 		}

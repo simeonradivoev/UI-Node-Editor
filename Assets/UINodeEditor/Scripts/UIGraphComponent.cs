@@ -6,6 +6,10 @@ using UnityEngine.Rendering;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A component tha can be placed in a scene and will render all UI elements from a <see cref="UIGraphObject"/>.
+    /// It uses a local <see cref="UIGraphRenderer"/> that handles pooling.
+    /// </summary>
 	[RequireComponent(typeof(Camera))]
 	[ImageEffectAllowedInSceneView]
 	public class UIGraphComponent : MonoBehaviour

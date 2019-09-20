@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A node that acts like a filter for UI elements. If the filter input is false then no children will be executed.
+    /// </summary>
 	[Title("Util","Execution Filter")]
 	public class ExecutionFilterNode : AbstractNode
 	{

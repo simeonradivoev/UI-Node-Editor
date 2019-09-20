@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// The base class for all nodes that are in a <see cref="UIGraphObject"/>.
+    /// </summary>
 	public class AbstractUINode : AbstractNode
 	{
 		private UIDirtyType m_Dity;

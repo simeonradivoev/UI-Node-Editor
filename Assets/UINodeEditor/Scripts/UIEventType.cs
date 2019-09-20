@@ -1,12 +1,22 @@
 ﻿namespace UINodeEditor
 {
+    /// <summary>
+    /// The type of UI event that a <see cref="UIMasterNode"/> will execute.
+    /// 
+    /// </summary>
 	public enum UIEventType
 	{
-        //Layout event is ran first on main thread.
+        /// <summary>
+        /// Layout event is ran first on main thread.
+        /// </summary>
 		Layout,
-        //Pre Repaint is ran second on multiple threads
+        /// <summary>
+        /// Pre Repaint is ran second on multiple threads
+        /// </summary>
 		PreRepaint,
-        //Repaint is ran final on main thread.
+        /// <summary>
+        /// Repaint is ran final on main thread.
+        /// </summary>
 		Repaint
-	}
+    }
 }

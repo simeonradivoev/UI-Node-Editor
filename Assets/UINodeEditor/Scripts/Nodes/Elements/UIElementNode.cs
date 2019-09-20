@@ -6,6 +6,10 @@ using UnityEngine;
 
 namespace UINodeEditor.Elements
 {
+    /// <summary>
+    /// Base class for all UI elements.
+    /// It has UI position and offset values as well as an Execute methods that calculates the rects of all children.
+    /// </summary>
 	public class UIElementNode : AbstractUINode
 	{
 		private EmptySlot<Action<UIEventData>> m_Event;
@@ -64,6 +68,13 @@ namespace UINodeEditor.Elements
 			}
 		}
 
+        /// <summary>
+        /// Execute a UI event.
+        /// Events can be of multiple types <see cref="UIEventType"/>.
+        /// Some events are ran on a different thread.
+        /// </summary>
+        /// <param name="eventData"></param>
+        /// <param name="rect"></param>
 		protected virtual void Execute(UIEventData eventData,Rect rect)
 		{
 			eventData.Rect = new Rect(rect.position, rect.size);

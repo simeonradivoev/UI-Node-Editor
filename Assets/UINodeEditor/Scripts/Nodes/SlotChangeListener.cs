@@ -4,6 +4,10 @@ using NodeEditor;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A slot change listener can access a slot value from a node and compare it with an old cached value to see if new values differs. 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
 	public class SlotChangeListener<T>
 	{
 		private ISlot m_Slot;
@@ -16,6 +20,11 @@ namespace UINodeEditor
 			m_ChangeListener = action;
 		}
 
+        /// <summary>
+        /// Get the slot value from a given node.
+        /// </summary>
+        /// <param name="node">The node that the slot belongs to.</param>
+        /// <returns>The current value of the slot.</returns>
 		public T this[AbstractNode node]
 		{
 			get

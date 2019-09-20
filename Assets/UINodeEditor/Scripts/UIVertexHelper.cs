@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// Vertex helper ripped straight from unity's UI.
+    /// </summary>
 	public class UIVertexHelper
 	{
 		private static readonly Vector4 s_DefaultTangent = new Vector4(1f, 0.0f, 0.0f, -1f);

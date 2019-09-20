@@ -5,6 +5,10 @@ using UnityEngine.Sprites;
 
 namespace UINodeEditor.Elements
 {
+    /// <summary>
+    /// Tiled image is similar to <see cref="UnityEngine.UI.Image"/> with the tiled image option enabled.
+    /// It draws a sprite that can be tiled.
+    /// </summary>
 	[Title("Elements","Image (Tiled)")]
 	public class TiledImageNode : GraphicNode
 	{

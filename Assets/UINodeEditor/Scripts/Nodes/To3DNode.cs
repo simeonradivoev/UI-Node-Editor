@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A node that converts a Vector2 into a Vector3
+    /// </summary>
 	[Title("Conversion","To 3D")]
 	public class To3DNode : AbstractNode
 	{

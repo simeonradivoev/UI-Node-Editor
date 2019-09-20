@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace UINodeEditor
 {
+    /// <summary>
+    /// A node that builds a matrix4x4 from position, rotation and scale. 
+    /// </summary>
 	[Title("Builder","Matrix4x4")]
 	public class MatrixBuilderNode : AbstractNode
 	{

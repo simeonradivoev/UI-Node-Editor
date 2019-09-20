@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 namespace UINodeEditor.Elements
 {
+    /// <summary>
+    /// Simple sprite image node that is similar ot <see cref="Image"/> with simple image option enabled.
+    /// It draws a single sprite with no other effects.
+    /// </summary>
 	[Title("Elements","Image (Simple)")]
 	public class SimpleImageNode : GraphicNode
 	{
