@@ -7,14 +7,17 @@ using Object = UnityEngine.Object;
 
 namespace UINodeEditor
 {
-    /// <summary>
-    /// A graph object that holds all UI nodes as well as exposed references.
-    /// </summary>
+	/// <summary>
+	/// A graph object that holds all UI nodes as well as exposed references.
+	/// </summary>
 	[CreateAssetMenu]
 	public class UIGraphObject : GraphObjectBase, IReferenceTable, ISerializationCallbackReceiver, IPropertyTable
 	{
-        private Dictionary<Guid, Object> m_References = new Dictionary<Guid, Object>();
-		[SerializeField, HideInInspector] private List<ReferenceEntry> m_SerializedReferences = new List<ReferenceEntry>();
+		private Dictionary<Guid, Object> m_References = new Dictionary<Guid, Object>();
+
+		[SerializeField, HideInInspector]
+		private List<ReferenceEntry> m_SerializedReferences = new List<ReferenceEntry>();
+
 		[SerializeField, HideInInspector] private TextAsset m_DataAsset;
 		[SerializeField, HideInInspector] private string m_SerializedGraph;
 
@@ -27,11 +30,11 @@ namespace UINodeEditor
 			public Object obj;
 		}
 
-        /// <summary>
-        /// Set an exposed reference values.
-        /// </summary>
-        /// <param name="id">The exposed reference id.</param>
-        /// <param name="value">The new value of the exposed reference.</param>
+		/// <summary>
+		/// Set an exposed reference values.
+		/// </summary>
+		/// <param name="id">The exposed reference id.</param>
+		/// <param name="value">The new value of the exposed reference.</param>
 		public void SetReferenceValue(Guid id, Object value)
 		{
 			if (m_References.ContainsKey(id))
@@ -40,19 +43,19 @@ namespace UINodeEditor
 			}
 			else
 			{
-				m_References.Add(id,value);
+				m_References.Add(id, value);
 			}
 #if UNITY_EDITOR
 			UnityEditor.EditorUtility.SetDirty(this);
 #endif
 		}
 
-        /// <summary>
-        /// Get a value for an exposed reference.
-        /// </summary>
-        /// <param name="id">The id of the reference.</param>
-        /// <param name="idValid">Does the reference exist.</param>
-        /// <returns>The exposed reference value.</returns>
+		/// <summary>
+		/// Get a value for an exposed reference.
+		/// </summary>
+		/// <param name="id">The id of the reference.</param>
+		/// <param name="idValid">Does the reference exist.</param>
+		/// <returns>The exposed reference value.</returns>
 		public Object GetReferenceValue(Guid id, out bool idValid)
 		{
 			Object val;
@@ -60,22 +63,22 @@ namespace UINodeEditor
 			return val;
 		}
 
-        /// <summary>
-        /// Remove an exposed reference with a given id.
-        /// </summary>
-        /// <param name="id">The id of the reference to remove.</param>
+		/// <summary>
+		/// Remove an exposed reference with a given id.
+		/// </summary>
+		/// <param name="id">The id of the reference to remove.</param>
 		public void ClearReferenceValue(Guid id)
 		{
 			m_References.Remove(id);
 		}
 
-        /// <summary>
-        /// Get a global property value. It just calls <see cref="GlobalProperties{T}"/>.
-        /// </summary>
-        /// <typeparam name="T">The type of global property.</typeparam>
-        /// <param name="id">The id of the global property.</param>
-        /// <param name="validId">Does the id exist.</param>
-        /// <returns></returns>
+		/// <summary>
+		/// Get a global property value. It just calls <see cref="GlobalProperties{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of global property.</typeparam>
+		/// <param name="id">The id of the global property.</param>
+		/// <param name="validId">Does the id exist.</param>
+		/// <returns></returns>
 		public T GetPropertyValue<T>(Guid id, out bool validId)
 		{
 			T val;
@@ -90,10 +93,23 @@ namespace UINodeEditor
 
 		public void SetPropertyValue<T>(Guid id, T val)
 		{
-			GlobalProperties<T>.SetValue(id,val);
+			GlobalProperties<T>.SetValue(id, val);
 		}
 
-        void ISerializationCallbackReceiver.OnBeforeSerialize()
+		protected IGraph CreateGraph()
+		{
+			return new NodeGraph();
+		}
+
+		protected override void OnObjectEnable()
+		{
+			if (graph == null)
+			{
+				graph = CreateGraph();
+			}
+		}
+
+		void ISerializationCallbackReceiver.OnBeforeSerialize()
 		{
 			var elementData = SerializationHelper.Serialize(graph);
 			m_SerializedGraph = JsonUtility.ToJson(elementData);
@@ -101,15 +117,16 @@ namespace UINodeEditor
 			m_SerializedReferences.Clear();
 			foreach (var o in m_References)
 			{
-				m_SerializedReferences.Add(new ReferenceEntry(){guid = o.Key.ToByteArray(),obj = o.Value});
+				m_SerializedReferences.Add(new ReferenceEntry() {guid = o.Key.ToByteArray(), obj = o.Value});
 			}
 		}
 
-        void ISerializationCallbackReceiver.OnAfterDeserialize()
+		void ISerializationCallbackReceiver.OnAfterDeserialize()
 		{
 			try
 			{
-				var deserializedGraph = SerializationHelper.Deserialize<IGraph>(JsonUtility.FromJson<SerializationHelper.JSONSerializedElement>(m_SerializedGraph), null);
+				var deserializedGraph = SerializationHelper.Deserialize<IGraph>(
+					JsonUtility.FromJson<SerializationHelper.JSONSerializedElement>(m_SerializedGraph), null);
 				if (graph == null)
 					graph = deserializedGraph;
 				else
@@ -117,7 +134,10 @@ namespace UINodeEditor
 			}
 			catch (Exception e)
 			{
-				graph = new NodeGraph();
+				graph = CreateGraph();
+				graph.OnEnable();
+				graph.ValidateGraph();
+				graph.onNodeAdded += OnNodeAdded;
 			}
 
 			m_References.Clear();
@@ -125,6 +145,7 @@ namespace UINodeEditor
 			{
 				m_References.Add(new Guid(referenceEntry.guid), referenceEntry.obj);
 			}
+
 			m_SerializedReferences.Clear();
 		}
 
